@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation - Plateforme NOE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 40px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        section#formation { background: white; border-radius: 10px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        section#formation h2 { color: #333; font-size: 2.5em; margin-bottom: 20px; text-align: center; }
+        section#formation > p { color: #666; font-size: 1.1em; text-align: center; margin-bottom: 50px; line-height: 1.6; }
+        .formation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .formation-card { background: #f9f9f9; border-left: 5px solid #667eea; padding: 30px; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s; }
+        .formation-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2); }
+        .formation-card h3 { color: #667eea; margin-bottom: 15px; font-size: 1.4em; }
+        .formation-card p { color: #555; line-height: 1.6; margin-bottom: 20px; }
+        .formation-card a { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 25px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: opacity 0.3s; }
+        .formation-card a:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="formation">
+            <h2>Formation</h2>
+            <p>Développez vos compétences avec nos formations professionnelles spécialisées. Accédez à des programmes de qualité conçus par des experts du domaine.</p>
+            <div class="formation-grid">
+                <div class="formation-card">
+                    <h3>Formation Initiale</h3>
+                    <p>Maîtrisez les bases et les fondamentaux de votre domaine d'activité avec un apprentissage progressif et structuré par des professionnels expérimentés.</p>
+                    <a href="#details">En savoir plus</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Formation Continue</h3>
+                    <p>Restez à jour avec les dernières tendances et évolutions de votre secteur. Nos modules de formation continue vous permettent de maintenir vos compétences à jour.</p>
+                    <a href="#details">En savoir plus</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Formation Spécialisée</h3>
+                    <p>Approfondissez votre expertise dans des domaines spécifiques. Formations avancées pour professionnels souhaitant se spécialiser ou développer de nouvelles compétences.</p>
+                    <a href="#details">En savoir plus</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Certification Professionnelle</h3>
+                    <p>Obtenez des certifications reconnues internationalement qui valorisent votre profil et renforcent votre employabilité sur le marché du travail.</p>
+                    <a href="#details">En savoir plus</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Formation en Ligne</h3>
+                    <p>Accédez à notre plateforme e-learning flexible. Suivez nos cours à votre rythme, de n'importe où et à n'importe quel moment, avec un accompagnement personnalisé.</p>
+                    <a href="#details">En savoir plus</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Ateliers Pratiques</h3>
+                    <p>Participez à des sessions interactives et pratiques. Développez vos compétences en travaillant sur des projets réels avec nos formateurs expérimentés.</p>
+                    <a href="#details">En savoir plus</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
