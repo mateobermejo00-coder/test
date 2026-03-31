@@ -1,12 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plateforme NOE Formation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the homepage!</h1>
-    <p>Current Date and Time (UTC): 2026-03-30 14:48:39</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/">Plateforme <span>NOE</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#pasi">PASI</a>
+          <a href="#indicateurs">Indicateurs</a>
+          <a href="#qualopi">QUALIOPI</a>
+        </nav>
+        <button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
+      </div>
+    </header>
+
+    <main class="container main-grid">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1>Formations BTP adaptées à vos besoins</h1>
+            <p>Accompagnement, indicateurs de performance et préparation QUALIOPI pour vos équipes.</p>
+            <a class="cta" href="#tabs">Voir les formations</a>
+          </div>
+          <div class="hero-illustration" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <div class="content">
+        <section id="tabs" class="tabs">
+          <div class="tab-buttons" role="tablist" aria-label="Sections de formation">
+            <button class="tab-button active" data-target="pasi" role="tab" aria-selected="true">PASI</button>
+            <button class="tab-button" data-target="indicateurs" role="tab">Indicateurs</button>
+            <button class="tab-button" data-target="qualopi" role="tab">QUALIOPI</button>
+          </div>
+
+          <div class="tab-contents">
+            <article id="pasi" class="tab-content active" role="tabpanel">
+              <h2>PASI</h2>
+              <p>Programme d'accompagnement pour les salariés du BTP : modules pratiques et formation sur sites.</p>
+            </article>
+
+            <article id="indicateurs" class="tab-content" role="tabpanel">
+              <h2>Indicateurs</h2>
+              <p>Tableaux de bord clairs pour suivre la performance, le taux de réussite et l'engagement.</p>
+            </article>
+
+            <article id="qualopi" class="tab-content" role="tabpanel">
+              <h2>QUALIOPI</h2>
+              <p>Accompagnement vers la certification QUALIOPI : audits, documents et formation des équipes.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="contact-card">
+          <h3>Contactez-nous</h3>
+          <p><strong>Email:</strong> <a href="mailto:contact@noeformation.com">contact@noeformation.com</a></p>
+          <p><strong>Téléphone:</strong> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+          <p><strong>Horaires:</strong> Lun - Ven, 9h - 17h</p>
+          <a class="btn" href="mailto:contact@noeformation.com">Nous contacter</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="brand">© 2026 Plateforme NOE</div>
+        <nav class="footer-nav">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Responsive menu
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      const menuBtn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.main-nav');
+
+      function showTab(targetId) {
+        contents.forEach(c => c.classList.remove('active'));
+        buttons.forEach(b => b.classList.remove('active'));
+        const activeContent = document.getElementById(targetId);
+        if (activeContent) activeContent.classList.add('active');
+        const activeButton = Array.from(buttons).find(b => b.dataset.target === targetId);
+        if (activeButton) activeButton.classList.add('active');
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          showTab(this.dataset.target);
+        });
+      });
+
+      menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
